@@ -13,12 +13,12 @@ dotenv.config();
 connectDB();
 
 const app=express()
-const __dirname=path.resolve();
+const _dirname=path.resolve();
 
 app.use(cors({
     origin: [
         "http://localhost:3000",  // Frontend in development
-        "https://your-vercel-domain.vercel.app"  // Frontend in production
+      
       ],
       methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true,
@@ -36,12 +36,12 @@ app.use('/api/v1/product',productRoutes);
 // app.get('/',(req,res)=>{
 //     res.send({msg:"welcome to ecommerce app"})
 // })
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, 'client/build')));
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-    });
-  }
+
+  app.use(express.static(path.join(_dirname, '/client/build')));
+  app.get('*', (_, res) => {
+      res.sendFile(path.resolve(__dirname, "client","build", "index.html"));
+  });
+
 
 const PORT=process.env.PORT || 8000;
 

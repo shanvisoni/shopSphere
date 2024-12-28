@@ -6,7 +6,7 @@ import axios from 'axios';
 import {Select} from "antd"
 import { useNavigate } from 'react-router-dom';
 const {Option}=Select
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 const CreateProduct = () => {
   const navigate=useNavigate()

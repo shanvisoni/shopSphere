@@ -2,7 +2,7 @@ import Layout from '../component/layout/Layout'
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 const ProductDetails = () => {
     const params=useParams()

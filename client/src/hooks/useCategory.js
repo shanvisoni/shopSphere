@@ -1,6 +1,6 @@
 import { useState,useEffect } from "react";
 import axios from 'axios';
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 
 export default function useCategory(){

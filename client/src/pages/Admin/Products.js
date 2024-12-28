@@ -4,7 +4,7 @@ import Layout from '../../component/layout/Layout'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 const Products = () => {
 const [products,setProducts]=useState([])

@@ -5,7 +5,7 @@ import {  toast } from 'react-toastify';
 import axios from 'axios';
 import CategoryForm from '../../component/Form/CategoryForm';
 import { Button, Modal } from 'antd';
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 const CreateCategory = () => {
   const[categories,setCategories]=useState([])

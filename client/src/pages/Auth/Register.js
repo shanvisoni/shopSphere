@@ -5,7 +5,7 @@ import Layout from '../../component/layout/Layout'
 import { toast } from 'react-toastify';
 import "../../styles/authStyle.css"
 import { useAuth } from "../../context/auth";
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 const Register = () => {
   const [email, setEmail] = useState('');

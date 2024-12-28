@@ -64,6 +64,7 @@ reports/
 build/
 dist/
 
+vercel.json
 
 # IDE specific files
 .idea/

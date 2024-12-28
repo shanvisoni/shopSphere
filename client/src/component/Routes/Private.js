@@ -3,7 +3,7 @@ import {useAuth} from "../../context/auth";
 import { Outlet } from "react-router-dom";
 import axios from "axios";
 import Spinner from "../Spinner";
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 export default function PrivateRoute(){
     const [ok,setOk]=useState(false)

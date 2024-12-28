@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../component/layout/Layout'
 import { useSearch } from '../context/search'
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 const Search = () => {
     const [values,setValues] = useSearch();

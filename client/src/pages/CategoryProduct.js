@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import Layout from '../component/layout/Layout'
 import axios from 'axios'
 import { useParams, useNavigate } from 'react-router-dom'
-const API = "http://localhost:5080/api/v1";
+const API = process.env.REACT_APP_API_URL;
 
 const CategoryProduct = () => {
   const params=useParams()
