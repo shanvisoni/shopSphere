@@ -18,7 +18,7 @@ const _dirname=path.resolve();
 app.use(cors({
     origin: [
         "http://localhost:3000",  // Frontend in development
-        "https://shopsphere-66r7.onrender.com",
+        "https://shopsphere-1-jxst.onrender.com",
       ],
       methods: ["GET", "POST", "PUT", "DELETE"],
       credentials: true,
