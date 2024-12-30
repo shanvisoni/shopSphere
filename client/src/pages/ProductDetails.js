@@ -2,7 +2,11 @@ import Layout from '../component/layout/Layout'
 import React,{useState,useEffect} from 'react'
 import axios from 'axios'
 import { useParams } from 'react-router-dom'
-const API = process.env.REACT_APP_API_URL;
+const API =
+  window.location.origin.includes("localhost")
+    ? "http://localhost:5080/api/v1" // Development URL
+    : "/api/v1"; // Production URL
+
 
 const ProductDetails = () => {
     const params=useParams()
