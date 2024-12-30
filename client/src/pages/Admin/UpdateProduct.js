@@ -6,11 +6,9 @@ import axios from 'axios';
 import {Select} from "antd"
 import { useNavigate, useParams } from 'react-router-dom';
 const {Option}=Select
-const API =
-  window.location.origin.includes("localhost")
-    ? "http://localhost:5080/api/v1" // Development URL
-    : "/api/v1"; // Production URL
-
+const API = window.location.origin.includes("localhost")
+  ? "http://localhost:5080/api/v1"
+  : "https://shopsphere-1-jxst.onrender.com/api/v1";
 
 const UpdateProduct = () => {
     const navigate=useNavigate()

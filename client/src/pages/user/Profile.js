@@ -4,10 +4,9 @@ import UserMenu from '../../component/layout/UserMenu'
 import { useAuth } from '../../context/auth'
 import { toast } from 'react-toastify'
 import axios from 'axios'
-const API =
-  window.location.origin.includes("localhost")
-    ? "http://localhost:5080/api/v1" // Development URL
-    : "/api/v1"; // Production URL
+const API = window.location.origin.includes("localhost")
+  ? "http://localhost:5080/api/v1"
+  : "https://shopsphere-1-jxst.onrender.com/api/v1";
 
 
 const Profile = () => {

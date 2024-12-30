@@ -13,7 +13,7 @@ dotenv.config();
 connectDB();
 
 const app=express()
-const _dirname=path.resolve();
+const __dirname=path.resolve();
 
 app.use(cors({
     origin: [
@@ -37,10 +37,11 @@ app.use('/api/v1/product',productRoutes);
 //     res.send({msg:"welcome to ecommerce app"})
 // })
 
-  app.use(express.static(path.join(_dirname, '/client/build')));
-  app.get('*', (_, res) => {
-      res.sendFile(path.resolve(__dirname, "client","build", "index.html"));
-  });
+app.use(express.static(path.join(__dirname, "../client/build")));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build/index.html"));
+});
+
 
 
 const PORT=process.env.PORT || 8000;

@@ -4,10 +4,9 @@ import {useNavigate} from 'react-router-dom'
 import Layout from '../../component/layout/Layout'
 import {  toast } from 'react-toastify';
 import "../../styles/authStyle.css"
-const API =
-  window.location.origin.includes("localhost")
-    ? "http://localhost:5080/api/v1" // Development URL
-    : "/api/v1"; // Production URL
+const API = window.location.origin.includes("localhost")
+  ? "http://localhost:5080/api/v1"
+  : "https://shopsphere-1-jxst.onrender.com/api/v1";
 
 
 const ForgotPassword = () => {

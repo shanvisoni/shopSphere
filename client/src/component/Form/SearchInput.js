@@ -2,10 +2,9 @@ import React from 'react'
 import { useSearch } from '../../context/search'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-const API =
-  window.location.origin.includes("localhost")
-    ? "http://localhost:5080/api/v1" // Development URL
-    : "/api/v1"; // Production URL
+const API = window.location.origin.includes("localhost")
+  ? "http://localhost:5080/api/v1"
+  : "https://shopsphere-1-jxst.onrender.com/api/v1";
 
 
 

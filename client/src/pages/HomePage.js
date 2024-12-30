@@ -6,10 +6,9 @@ import { Checkbox ,Radio} from 'antd'
 import { Prices } from '../component/Prices'
 import { useCart } from '../context/cart'
 import { toast } from 'react-toastify'
-const API =
-  window.location.origin.includes("localhost")
-    ? "http://localhost:5080/api/v1" // Development URL
-    : "/api/v1"; // Production URL
+const API = window.location.origin.includes("localhost")
+  ? "http://localhost:5080/api/v1"
+  : "https://shopsphere-1-jxst.onrender.com/api/v1";
 
 
 const HomePage = () => {

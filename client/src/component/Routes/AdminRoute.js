@@ -7,11 +7,9 @@ import { useNavigate,Outlet } from 'react-router-dom';
 
 import axios from 'axios';
 import Spinner from "../Spinner";
-const API =
-  window.location.origin.includes("localhost")
-    ? "http://localhost:5080/api/v1" // Development URL
-    : "/api/v1"; // Production URL
-
+const API = window.location.origin.includes("localhost")
+  ? "http://localhost:5080/api/v1"
+  : "https://shopsphere-1-jxst.onrender.com/api/v1";
 
 export default function AdminRoute() {
     const [ok, setOk] = useState(false);
